@@ -6,8 +6,16 @@
 {% block title %}Main Page{% endblock %}
 
 {% block content %}
-<form action="/game">
-    <input type="submit" value="New game" class='btn btn-success'/>
-</form>
+
+<a href='/{{deck_id}}/new_card'>
+	<button type="button" class="btn btn-primary">
+		New card
+	</button> 
+</a>
+
+{% if card %}
+{{card}}
+<img src="{{ card[0]['image'] }}" alt="Card" style="height: 200px;">
+{% endif %}
 
 {% endblock %}
