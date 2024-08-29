@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<a href='/{{deck_id}}/new_card'>
+<a href='/{{deck}}/new_card'>
 	<button type="button" class="btn btn-primary">
 		New card
 	</button> 
@@ -16,6 +16,8 @@
 {% if card %}
 {{card}}
 <img src="{{ card[0]['image'] }}" alt="Card" style="height: 200px;">
+
+{{card_list}}
 {% endif %}
 
 {% endblock %}
